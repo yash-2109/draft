@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+
+void patternPrint11(int n){
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= n-i; j++){
+            std::cout << " ";
+        }
+        for(char j = 'A'; j <= 'A'+i-1; j++){
+            std::cout << j;
+        }
+        for(char j = 'A'+i-2; j >= 'A'; j--){
+            std::cout << j;
+        }
+        for(int j = 1; j <= n-i; j++){
+            std::cout << " ";
+        }
+        std::cout << std::endl;
+    }
+    
+}
+
+int main(){
+    int t;
+    std::cin >> t;
+    for( int i=0; i<t; i++){
+        int n;
+        std::cin >> n;
+        patternPrint11(n);
+    }
+}
